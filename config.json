@@ -1,0 +1,44 @@
+{
+  "urls": [
+    "https://www.uscis.gov/humanitarian/refugees-and-asylum",
+    "https://www.uscis.gov/forms/explore-my-options",
+    "https://www.uscis.gov/green-card",
+    "https://www.uscis.gov/forms/all-forms",
+    "https://www.uscis.gov/tools/processing-times",
+    "https://www.uscis.gov/policy-manual",
+    "https://www.uscis.gov/about-us/policy-and-strategy/office-of-policy-and-strategy-news",
+    "https://www.uscis.gov/humanitarian/frequently-asked-questions-faqs",
+    "https://www.unhcr.org/refugee-statistics/",
+    "https://www.unhcr.org/globaltrends",
+    "https://www.unhcr.org/data-and-demographics",
+    "https://trac.syr.edu/immigration/detention/",
+    "https://trac.syr.edu/immigration/reports/latest/",
+    "https://trac.syr.edu/immigration/quickfacts/",
+    "https://travel.stackexchange.com/questions/tagged/customs-and-immigration",
+    "https://dtm.iom.int/",
+    "https://dtm.iom.int/datasets",
+    "https://dtm.iom.int/reports",
+    "https://www.oecd.org/migration/mig/oecdmigrationdatabases.htm",
+    "https://www.oecd.org/migration/integration-indicators-2012/"
+  ],
+  "output_dir": "./immigration_data",
+  "output_format": "json",
+  "rate_limit": 3.0,
+  "respect_robots_txt": true,
+  "use_selenium": true,
+  "max_retries": 5,
+  "custom_parsers": {
+    "https://www.uscis.gov": "web_scraper/parsers/custom_parsers/uscis_parser.py",
+    "https://www.unhcr.org": "web_scraper/parsers/custom_parsers/unhcr_parser.py",
+    "https://trac.syr.edu": "web_scraper/parsers/custom_parsers/tracreports_parser.py",
+    "https://travel.stackexchange.com": "web_scraper/parsers/custom_parsers/travel_stackexchange_parser.py",
+    "https://dtm.iom.int": "web_scraper/parsers/custom_parsers/iom_dtm_parser.py",
+    "https://www.oecd.org": "web_scraper/parsers/custom_parsers/oecd_parser.py"
+  },
+  "extract_options": {
+    "extract_text": true,
+    "extract_links": true,
+    "extract_tables": true,
+    "extract_metadata": true
+  }
+} 
