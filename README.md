@@ -27,8 +27,8 @@ A Python-based web scraper designed for collecting immigration-related data for 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/immigration-data-scraper.git
-   cd immigration-data-scraper
+   git clone https://github.com/sajid-karim/web-scraper.git
+   cd web-scraper
    ```
 
 2. Install the required dependencies:
